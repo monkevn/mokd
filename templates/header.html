@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<title>臻享生活-旅游网</title>
+		<!--reset.css-->
+		<link rel="stylesheet" href="/static/css/reset.css" type="text/css" />
+		<!--1024以上屏幕-->
+		<link rel="stylesheet" href="/static/css/modern.css" type="text/css" />
+		<!--ie兼容-->
+		<!--[if IE 6]>
+		<link rel="stylesheet" href="" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+		<link rel="stylesheet" href="" type="text/css" />
+		<![endif]-->
+		
+		<!--icons-->
+		<link rel="shortcut icon" href="/static/images/favicon.ico">
+		<link rel="apple-touch-icon" href="">
+		<link rel="apple-touch-icon" sizes="76x76" href="">
+		<link rel="apple-touch-icon" sizes="120x120" href="">
+		<link rel="apple-touch-icon" sizes="152x152" href="">
+		
+
+	</head>
+
+	<!--[if lt IE 7 ]> <body class="ie6 "> <![endif]-->
+	<!--[if IE 7 ]>  <body class="ie7 "> <![endif]-->
+	<!--[if IE 8 ]> <body class="ie8 "> <![endif]-->
+	<!--[if IE 9 ]> <body class="ie9 "> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<body class="">
+		<!--<![endif]-->
+		
+		<div id="C_header">
+			<div id="C_headerBody">
+				<div id="C_logo">
+					<a href="/" style="text-decoration: none"> 
+					 <h2 style="padding-top: 5px">旅游网</h2>
+						<!-- <img src="/static/images/logo.jpg" width="auto" height="45" alt="Meetup" />  -->
+					</a>
+				</div>
+				<div id="C_userNav">
+					<ul id="C_userLinks" class="inlineblockList">
+					   
+
+						{% if request.user.username  %}
+						<li class="C_userNavItem C_userTopNavItem">
+							<div id="nav-profile" class="dropdown callout">
+								<div class="nav-avatar dropdown-toggle" style="width: 120px" data-toggle="dropdown">
+									<div style="display: inline-block;" class="avatar avatar--person avatar--small" style="background-image: url('/static/images/noPhoto_50.png')" title="Sophie">
+									</div>
+									<a href="/members" style="display: inline-block; margin-bottom: 0px" class="nav-button--white">{{request.user.username}}</a>
+									<i class="icon-drop-down"></i>
+								</div>
+								<div class="dropdown-menu bordered messagesOffset">
+
+									<ul class="lastUnit" id="nav-account-links">
+										<li><a href="/members">个人主页</a></li>
+										<li><a href="/account">账户设置</a></li>
+										<li><a href="/logout">退出登录</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						{% else %}
+						<li class="C_userNavItem C_userTopNavItem C_userTopNavButtonItem">
+							<a href="/reg" class="omnCamp omnrg_signup nav-button--red">注册</a>
+						</li>
+						<li class="C_userNavItem C_userTopNavItem C_userTopNavButtonItem">
+							<a href="/login" class="nav-button--white">登录</a>
+						</li>
+						{% endif %}
+					</ul>
+
+				</div>
+
+				<div id="C_globalNav">
+					<div id="C_tabs" style=" margin-left: -80px">
+						<a href="/"> <span class="C_tabContent"> <span class="C_topBig"> 首页 </span></a>
+						<a href="/scenic"> <span class="C_tabContent"> <span class="C_topBig"> 景点 </span></a>
+						<a href="/hotel"> <span class="C_tabContent"> <span class="C_topBig"> 住宿</span></a>
+						<a href="/guide"> <span class="C_tabContent"> <span class="C_topBig"> 游记攻略</span> </a>
+						<form action="/search/" method="post" style="display: inline-block;margin-left: 50px;"><input type="text" name="kw" placeholder="关键词...">{% csrf_token %}</form>
+					</div>
+				</div>
+
+			</div>
+		</div>  <!-- header -->

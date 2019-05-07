@@ -1,0 +1,68 @@
+#C_join.with-bg {
+    background-attachment: fixed;
+    background-image: url("../../images/bg_reg.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+}
+#emailAndPassword{
+    -moz-box-shadow: 1px 0px 10px #000000;
+    -webkit-box-shadow: 1px 0px 10px #000000;
+    box-shadow: 1px 0px 10px #000000;
+}
+#context-switch{
+	background-color: #dedede;
+	text-align: center;
+	padding: 10px 0;
+}
+.minimal-body {
+    border-radius: 2px;
+    margin: 0 auto 28px;
+    max-width: 384px;
+    text-align: left;
+}
+.signin{
+	padding: 0 1.33em;
+}
+.signin ol{
+	padding: 0;
+	margin:0;
+}
+.TextInput{
+	border: 1px solid #cacaca;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #3b3b3b;
+	width: 100%;
+}
+.signin label{
+	 color: #747474;
+    display: inline-block;
+    margin-bottom: 0.333333em;
+}
+.signin a,#context-switch a{
+	color:#f15923;
+}
+.signin input[type="checkbox"] {
+   vertical-align: -2px;
+}
+.heading{
+	margin:20px 0;
+}
+.heading h1{
+	text-align: center;
+	font-weight: normal;
+	color:#f15923;
+}
+
+.register_success .loginForm ol{
+	padding: 0 1.33em;
+	width:400px;
+	margin:0 auto;
+}
+.register_success h1{
+	text-align: center;
+	font-size:16px;
+	color: #555;
+}

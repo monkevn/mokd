@@ -1,0 +1,268 @@
+{%  include "header.html" %}
+		
+		<div id="C_page" class="lt">
+
+			<div id="C_pageBody">
+
+				<div id="C_context">
+					<div id="C_document" class="noNav">
+
+						<div id="D_groupMemberProfile" class="docBox   clearfix sitewide">
+
+							
+								<div class="inner-col">
+
+									<div class="docSection gmp-boxhead">
+
+										<div>
+
+											<hgroup>
+												<h3><span class="memName fn" itemprop="name">个人资料</span></h3>
+												
+
+												
+
+											</hgroup>
+
+											<div id="memberInfo_173434502"></div>
+										</div>
+
+									</div>
+
+									<div class="docSection profileQuestionsSection clearfix">
+										
+										<div class="lcol">
+										<form id="loginForm" class="loginForm" method="post" action="/account/">
+							<ol class="inline-form">
+								<li class="Row">
+						          <label>用户名</label>
+						          <div class="email">
+						          	{{request.user.username}}
+						          </div>
+						        </li>
+						        <li class="Row">
+						          <label>手机</label>
+						          <div id="email-wrapper">
+						            <input type="text" class="TextInput TextInput_large" name="phone" maxlength="255" id="username"></div>
+						        </li>
+						        <li class="Row">
+						          <label>常住地址</label>
+						          <div id="email-wrapper">
+						            <input type="text" class="TextInput TextInput_large" name="address" maxlength="255" id="username"></div>
+						        </li>
+<!-- 						        <li class="Row">
+						          <label >性别</label>
+						          
+						          <div class="D_form_compact" id="formLocation">
+						          	<div class="element coPicker">
+						          	<label class="element">
+									    <input type="radio" value="" name="gender">
+									    男
+									  </label>
+									  </div>
+									  <div class="element coPicker">
+						          	<label class="element">
+									    <input type="radio" value="" name="gender">
+									    女
+									  </label>
+									  </div>
+						        
+						          </div>
+						          
+						        </li> -->
+						        <!-- <li class="Row">
+						          <label >生日</label>
+						          <div class="D_form_compact" id="formLocation">
+										<div class="element coPicker">
+											<select name="year" id="year" class="">
+												<option value="us">1976年</option>
+												<option value="ca">1975年</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="month" id="month" class="">
+												<option value="meetup253">1月</option>
+												<option value="meetup296">2月</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="day" id="day" class="">					
+												<option value="us">1日</option>
+												<option value="ca">2日</option>
+											</select>
+										</div>
+									
+									</div>
+						        </li> -->
+						        <!-- <li class="Row">
+						          <label >常住地址</label>
+						          <div class="basics-wrapper">
+										<div class="picker card notrans on">
+											<div id="topic-section">
+												<div class="doc-content selection">
+													<div class="input">
+														<div class="tagger-container">
+															<div class="input-container">
+																<input type="text" data-target=".input" data-toggle="dropdown" class="" autocomplete="off" placeholder="例如：诗歌、京剧、美食、棋牌..." value="" id="topic" style="width: 343px;">
+																
+															</div>
+														</div>
+														
+														<div class="shaded" id="returned_topics">
+															<div class="inner">     
+																<ul class="tags">                    
+																	<li class="topic-pick inline-block">诗歌</li>          
+																	<li class="topic-pick inline-block">京剧</li>          
+																	<li class="topic-pick inline-block">美食</li>          
+																	<li class="topic-pick inline-block">棋牌</li>          
+																	<li class="topic-pick inline-block">唱歌</li>          
+																	<li class="topic-pick inline-block">听音乐</li>          
+																	<li class="topic-pick inline-block">看电影</li>          
+																	<li class="topic-pick inline-block">听讲座</li>          
+																	<li class="topic-pick inline-block">书法</li>          
+																	<li class="topic-pick inline-block">跳舞</li>          
+																	<li class="topic-pick inline-block">钓鱼</li>               
+																	<li class="topic-pick inline-block">宠物</li>
+																	<li class="topic-pick inline-block">羽毛球</li>          
+																	<li class="topic-pick inline-block">乒乓球</li>          
+																	<li class="topic-pick inline-block">跑步</li>          
+																	<li class="topic-pick inline-block">游泳</li>               
+																	<li class="topic-pick inline-block">公益</li>
+																	<li class="topic-pick inline-block">旅游</li>          
+																	<li class="topic-pick inline-block">摄影</li>               
+																	<li class="topic-pick inline-block">美食</li>
+																	<li class="topic-pick inline-block">饮茶</li>          
+																	<li class="topic-pick inline-block">扑克</li>          
+																	<li class="topic-pick inline-block">麻将</li>          
+																	<li class="topic-pick inline-block">下棋</li>   
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+						        </li>
+						        <li class="Row">
+						          <label >常住地</label>
+						          <div class="D_form_compact" id="formLocation">
+										<div class="element coPicker">
+											<select name="country" id="co" class="locNameUpdateCountry">
+												<option value="us">海南省</option>
+												<option value="ca">上海市</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="zip" id="zip" class="locNameUpdateZip locNameUpdateCity">
+												<option value="meetup253">三亚市</option>
+												<option value="meetup296">海口市</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="country" id="co" class="locNameUpdateCountry">					
+												<option value="us">海棠湾镇</option>
+												<option value="ca">海棠湾镇</option>
+											</select>
+										</div>
+									
+									</div>
+						        </li>
+						        <li class="Row">
+						          <label >籍贯地</label>
+									<div class="D_form_compact" id="formLocation">
+										<div class="element coPicker">
+											<select name="country" id="co" class="locNameUpdateCountry">
+												<option value="us">海南省</option>
+												<option value="ca">上海市</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="zip" id="zip" class="locNameUpdateZip locNameUpdateCity">
+												<option value="meetup253">三亚市</option>
+												<option value="meetup296">海口市</option>
+											</select>
+										</div>
+										<div class="element coPicker">
+											<select name="country" id="co" class="locNameUpdateCountry">					
+												<option value="us">海棠湾镇</option>
+												<option value="ca">海棠湾镇</option>
+											</select>
+										</div>
+									
+									</div>
+			
+						        </li> -->
+					            <li class="Row">
+						          <label>个人简介</label>
+						          <div id="email-wrapper">
+						            <textarea class="normal" rows="5" cols="34" id="short_desc" name="intro" tabindex="0"></textarea>
+						          </div>
+					        	</li>
+					        	
+						        
+						        </li>
+					        </ol>
+
+							{% csrf_token %}
+					        <div style="text-align:center;">
+							        		<input type="submit" class="button primary" value="完成"/>
+							        	</div>
+
+						</form>
+										</div>
+					<div class="rcol">
+							<div id="D_memberProfileAside" class="docSection padding-bottom">
+
+<!-- 							<div class="profileImageContainer rounded-corner-top " id="image_173434502">
+
+<span id="member-profile-photo">
+	<a target="_new" href="#">
+	<img src="assets/images/tmp/avatar/biggest.png" style="max-width:240px" alt="" class="D_memberProfilePhoto photo big-preview-photo"></a></span>
+
+<div>
+
+<a class="small" id="launch-photo-uploader">上传头像</a>
+
+</div>
+
+</div> -->
+								
+								</div>
+										</div>
+										
+									</div>
+									
+									
+
+								
+							</div>
+							
+						</div>
+						
+						
+
+					</div>
+
+				</div><!-- C_context -->
+			</div><!-- C_pageBody -->
+
+		</div>
+
+		<div id="fb-root">
+				<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+
+		
+		<script src="assets/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="assets/js/lib/bootstrap-dropdown.js"></script>
+		<script src="assets/js/tag.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,114 @@
+{%  include "header.html" %}
+		
+<div id="C_pageBody">
+
+
+
+
+
+<div id="C_context">
+<div class="clearfix" id="C_document">
+<div class="doc-box">
+<div class="doc-content">
+<h3>搜索结果</h3>
+</div>
+<div class="doc-content">
+<div class="D_tabRoot"></div>
+
+<div class="margin-top" id="member_list">
+<ul class="dividedList" id="memberList">
+
+{%  for h in hs %}
+		<li class="clearfix line memberInfo">
+		<div class="unit size3of5 gutter-right">
+
+            
+			<div class="unit gutter-right">
+				<a style="background-image: url('/{{h.pic}}')" class="mem-photo-background-60 square-60 block" href="#"></a>
+			</div>
+			<div class="margin-bottom unit lastUnit gutter-right member-details wrapNice ">
+				<h4 class="memberNameContainer">
+					<a class="memName" href="/detail/{{h.id}}">{{h.title}}</a>
+				</h4>
+				<ul class="resetList clear-both memberStats small">
+					<li>
+						<!-- <span>2014年2月8日</span> -->
+					</li>
+					<li class="last bioText"><p style="color:#ec1611;font-size: 16px;"> &yen;{{h.price}}</p></li>
+				</ul>
+			</div>
+		</div>
+	</li>
+	
+{% endfor %}
+{%  for h in sc %}
+		<li class="clearfix line memberInfo">
+		<div class="unit size3of5 gutter-right">
+			<div class="unit gutter-right">
+				<a style="background-image: url('/{{h.pic}}')" class="mem-photo-background-60 square-60 block" href="#"></a>
+			</div>
+			<div class="margin-bottom unit lastUnit gutter-right member-details wrapNice ">
+				<h4 class="memberNameContainer">
+					<a class="memName" href="/item/{{h.id}}">{{h.name}}</a>
+				</h4>
+				<ul class="resetList clear-both memberStats small">
+					<li>
+						<!-- <span>  333</span> -->
+					</li>
+					<li class="last bioText"><p style="color:#ec1611;font-size: 16px;"> {{h.price}}</p></li>
+				</ul>
+			</div>
+		</div>
+	</li>
+{% endfor %}
+</ul>
+
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+ 
+<div id="C_nav">
+<div id="C_metabox" class="doc-box ">
+<div data-original-title="" id="meta-organizers" class="doc-content memberinfo-widget-root">
+<h4>
+微信公众号:
+</h4>
+<div class="clearfix">
+<div id="meta-org-photo">
+
+<a href="/" class="memberinfo-widget block" data-memberid="29823932">
+	<img src="/static/images/qrcode.png" alt="" class="orgboxImg">
+</a>
+
+</div>
+</div>
+
+
+</div>
+</div>
+				
+</div>
+</div><!-- C_context -->
+</div><!-- C_pageBody -->
+</div>
+		<div id="fb-root">
+			<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="/static/js/lib/bootstrap-dropdown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

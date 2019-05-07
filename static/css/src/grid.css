@@ -1,0 +1,81 @@
+.cardList {
+    font-size: 0;
+    list-style: none outside none;
+    margin: 0 -18px 0 0;
+    padding: 0;
+    vertical-align: top;
+}
+.cardList > li {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 18px 18px 0;
+    padding: 0;
+    vertical-align: top;
+    width: 223px;
+}
+.cardList > li .doc-content {
+    border-top: 1px solid #eee;
+    padding: 18px 18px 0 !important;
+}
+.cardList > li .doc-content:first-child {
+    border-top: 0 none;
+}
+.nametag-photo {
+    background-color: #333;
+    background-position: center 20%;
+    background-size: cover;
+    display: block;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+}
+.nametag-photo-name {
+	background-image:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image:-webkit-linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image:-moz-linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image:-ms-linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image:-o-linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#66000000, endColorstr=#19ffffff);
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    left: 0;
+    line-height: 27px;
+    orphans: 2;
+    padding: 81px 18px 0;
+    position: absolute;
+    vertical-align: bottom;
+    width: 100%;
+}
+.nametag-photo-name h1, .nametag-photo-name h2, .nametag-photo-name h3, .nametag-photo-name h4, .nametag-photo-name h5, .nametag-photo-name h6 {
+    color: #fff;
+}
+.ie7 .nametag-photo-name, .ie8 .nametag-photo-name, .ie9 .nametag-photo-name {
+}
+.simple-card .muted.small{
+	margin-bottom:18px;
+}
+
+/* 
+ *author:xking
+ */
+ 
+/* repair */
+#C_logo,
+#C_logo a,
+#C_logo img{
+	width:154px;
+}
+#C_tabs{
+	text-align:center;
+}
+#C_tabs a{
+	display:block;
+	padding:0 20px 0 20px;
+	text-align:center;
+}

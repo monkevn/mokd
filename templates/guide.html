@@ -1,0 +1,79 @@
+{%  include "header.html" %}
+		
+		<div id="C_page" class="lt">
+			<div id="C_pageBody">
+				<div>
+					<h4 class="margin-bottom">最新旅游攻略：</h4>
+					<ul class="event-listing-container search-result">
+
+						{% for it in gs %}
+						<li class="event-listing line-gutters clearfix doc-padding  ">
+							<div class="unit size1of7">
+								<a class="list-time unlink omnCamp omngj_sj7ealla omnrv_fe1alla" href="#">
+								<time datetime="2014-09-26T00:00:00+08:00" itemprop="startDate">
+									{{it.post_time | date:"m-d"}}
+								</time> </a>
+							</div>
+							<div class="unit size4of7">
+								<div >
+									<a class="chapter-name unlink omnCamp omngj_sj7ealla omnrv_fe1alla" href="group.html"> <span itemprop="name">{{it.userId.username}}</span> </a>
+								</div>
+								<a class="big event-title bold unlink-dark wrapNice omnCamp omngj_sj7ealla omnrv_fe1alla" href="/article/{{it.id}}"> <span itemprop="summary">{{it.title}}</span> </a>
+								<div class="list-rsvpers clearfix">
+									<div class="attendee-count">
+										26
+	
+										人
+	
+										浏览
+									</div>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+
+
+						<li class="event-listing line-gutters clearfix doc-padding  ">
+							<div class="unit size1of7">
+								<a class="list-time unlink omnCamp omngj_sj7ealla omnrv_fe1alla" href="#">
+								<time datetime="2014-09-26T00:00:00+08:00" itemprop="startDate">
+									{{it.title}}
+								</time> </a>
+							</div>
+							<div class="unit size4of7">
+								<div >
+									<a class="chapter-name unlink omnCamp omngj_sj7ealla omnrv_fe1alla" href="group.html"> <span itemprop="name">讲座爱好者</span> </a>
+								</div>
+								<a class="big event-title bold unlink-dark wrapNice omnCamp omngj_sj7ealla omnrv_fe1alla" href="group_activity.html"> <span itemprop="summary">站在天人之际看楚汉之争</span> </a>
+								<div class="list-rsvpers clearfix">
+									<div class="attendee-count">
+										26
+	
+										人
+	
+										浏览
+									</div>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				
+			
+			</div>
+		</div>
+		<div id="fb-root">
+			<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="/static/js/lib/bootstrap-dropdown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,216 @@
+{%  include "header.html" %}
+
+		<div class="lt" id="C_page">
+
+			<div id="C_pageBody">
+
+				<div id="C_context">
+					<div class="noNav" id="C_document">
+
+						<div class="docBox   clearfix sitewide" id="D_groupMemberProfile">
+
+							<div itemtype="http://schema.org/Person" itemscope="" class="lcol">
+								<div class="inner-col">
+
+									<div class="docSection gmp-boxhead">
+
+										<div>
+
+											<hgroup>
+												<h1><span itemprop="name" class="memName fn">{{request.user.username}}</span><a href="/account">编辑个人信息</a></h1>
+												<a id="button" style="display:none;" class="button primary" href="javascript: void(0)">关注此人</a>
+											</hgroup>
+
+											<div id="memberInfo_173434502"></div>
+										</div>
+
+									</div>
+
+									<div class="docSection profileQuestionsSection">
+										<div class="dotted-section" id="D_memberProfileQuestions">
+											<div class="line" id="D_memberProfileMeta">
+												<div class="unit size1of3">
+													<div class="D_memberProfileContentItem">
+														<h4>注册时间</h4>
+														<p>
+															{{m.regtime}}
+														</p>
+													</div>
+												</div>
+												<div class="lastUnit size2of3">
+													<div class="D_memberProfileContentItem">
+														<h4>常住地</h4>
+														<p itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">
+
+															<span itemprop="addressLocality" class="locality">{{m.address}}</span>
+
+														</p>
+													</div>
+												</div>
+												<div class="lastUnit size2of3">
+													<div class="D_memberProfileContentItem">
+														<h4>手机</h4>
+														<p itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">
+
+															<span itemprop="addressLocality" class="locality">{{m.phone}}</span>
+
+														</p>
+													</div>
+												</div>
+
+											
+											</div>
+											<div class="line">
+												
+											</div>
+
+											<div class="D_memberProfileContentItem">
+
+												<h4>个人介绍</h4>
+
+												{{m.intro}}
+											</div>
+										</div>
+									</div>
+
+									<div class="docSection">
+										<h2> 我的订单 </h2>
+										<div id="my-meetup-groups-list" class="resetList figureset groupinfo-widget-root" data-original-title="">
+
+									<div class="table">
+    <div class="thead">
+      <div class="tr">
+        <div class="th">订单编号</div>
+         <div class="th">名称</div>
+          <div class="th">价格</div>
+           <div class="th">时间</div>
+        	
+      </div>
+    </div>
+    <div class="tbody">
+
+	  {% for i in data %}
+      <div class="tr">
+        <div class="td">
+          2019000{{i.0.id}}
+        </div>
+        <div class="td">
+			{% if i.0.otype == 1 %}
+          		{{i.1.name}}
+        	{% else %}
+        		{{i.1.title}}
+        	{% endif %}
+        </div>
+        <div class="td" style="color:#ec1611;">
+          &yen;{{i.0.price}}
+        </div>
+        <div class="td">
+          {{i.0.time}}
+        </div>
+      </div>
+		{% endfor %}
+
+    </div>
+
+<!--     <div class="tfoot">
+      <div class="tr">
+        <div class="td">
+          .table > .tfoot > .tr > .td
+        </div>
+        <div class="td">
+          .table > .tfoot > .tr > .td
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						
+
+						</div>
+
+					</div>
+
+				</div><!-- C_context -->
+			</div><!-- C_pageBody -->
+
+		</div>
+
+		<div id="fb-root">
+				<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+
+<style>
+table{
+   background: #fff;
+}
+table,thead,tbody,tfoot,tr, td,th{
+  text-align: center;
+  margin: auto;
+  border:1px solid #dedede;
+  padding: 1rem;
+  width: 100%;
+}
+.table    { display: table; width: 100%; }
+.tr       { display: table-row;  }
+.thead    { display: table-header-group }
+.tbody    { display: table-row-group }
+.tfoot    { display: table-footer-group }
+.col      { display: table-column }
+.colgroup { display: table-column-group }
+.td, .th   { display: table-cell;  }
+.caption  { display: table-caption }
+
+.table,
+.thead,
+.tbody,
+.tfoot,
+.tr,
+.td,
+.th{
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+.table{
+  background: #fff;
+  margin: auto;
+  border:none;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+.th{
+  font-weight: 700;
+  border:1px solid #dedede;
+  &:nth-child(odd){
+    border-right:none;
+  }
+}
+.td{
+  font-weight: 300;
+  border:1px solid #dedede;
+  border-top:none;
+  &:nth-child(odd){
+    border-right:none;
+  }
+}
+</style>		
+		<script src="assets/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="assets/js/lib/bootstrap-dropdown.js"></script>
+		<script src="assets/js/tag.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

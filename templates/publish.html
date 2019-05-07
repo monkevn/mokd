@@ -1,0 +1,79 @@
+{%  include "header.html" %}
+		<div class="lt" id="C_page">
+
+<div id="C_pageBody">
+<div id="C_context">
+<div class="noNav" id="C_document">
+
+		<div class="D_box bg_white">
+		<div class="D_boxbody">
+		<div class="D_boxsection isNotDivided ">
+		
+<form enctype="multipart/form-data" action="/publish/" class="settingsUpdate" method="post">
+<div class="D_form">
+<div class="elementGroup">
+<h3>发布旅游攻略</h3>
+<div class="element margin-top">
+<label class="small bold" for="name">文章标题</label>
+<input type="text" class="hasMaxLen maxChars60 text maxLenAdded" id="name" name="title">
+<div class="limit-container" style="display:none;">
+	<span id="charCount_name" class="limit">37 characters left</span>
+</div>
+
+</div>
+
+<div id="desc" class="element element_lastInGroup">
+<label class="small bold" for="short_desc">文章内容</label>
+
+<div class="redactor_box">
+	<ul class="redactor_toolbar">
+		<li><a class="redactor_btn_bold" title="Bold" href="javascript:void(null);" tabindex="-1"></a></li>
+		<li><a class="redactor_btn_italic" title="Italic" href="javascript:void(null);" tabindex="-1"></a></li>
+		<li><a class="redactor_btn_bulleter" title="Insert bullet" href="javascript:void(null);" tabindex="-1"></a></li>
+		<li><a class="redactor_btn_linker" title="Link/Unlink" href="javascript:void(null);" tabindex="-1"></a></li>
+		<li class="redactor_separator"></li>
+		<li><a class="redactor_btn_photo_picker" title="Insert image" href="javascript:void(null);" tabindex="-1"></a></li>
+		<li><a class="redactor_btn_videoinserter" title="Insert video" href="javascript:void(null);" tabindex="-1"></a></li>
+	</ul>
+	<div contenteditable="true" class="redactor_span-75 redactor_ redactor_editor" dir="ltr">
+		<p></p>
+	</div>
+	<textarea class="span-75 " style="height: 30em; display: none;" id="short_desc" tabindex="19" name="content"></textarea>
+</div>
+
+</div>
+
+{% csrf_token %}
+
+<input type="hidden" value="{{request.user.id}}" name="uid">
+
+</div>
+<div class="footElement">
+<input type="submit" class="button primary  noDisable" value="立即发布" name="submitButton">
+</div>
+</div>
+</form>
+		</div>
+		</div>
+	</div>
+
+</div>
+</div><!-- C_context -->
+</div><!-- C_pageBody -->
+
+
+</div>
+		<div id="fb-root">
+			<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="/static/js/lib/bootstrap-dropdown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

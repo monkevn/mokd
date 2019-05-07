@@ -1,0 +1,155 @@
+{%  include "header.html" %}
+<div class="lt" id="C_page">
+
+<div id="C_pageBody">
+
+
+
+
+<div class="doc-box" id="chapterHeader">
+</div>
+
+
+<div id="C_context">
+<div class="" id="C_document">
+<div class="doc-box photoBox" id="D_photoBox">
+<div class="doc-content">
+
+<h3>{{s.name}}</h3>
+<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-carousel">
+								<br>
+								<img width="300px" height="300px"  src="/{{s.pic}}">
+								
+								 
+								 <p  class="ellipsize"> <br>&yen; {{s.price}}</p> 
+								<a href="/order/?t=s&sid={{s.id}}&uid={{request.user.id}}"><button class="D_submit" > 立即购买 </button> </a>	
+								
+								<br>
+ 							
+				              <p style="font-size: 16px;">景点介绍：<br>{{s.intro}}  </p>
+		                      <p style="font-size: 16px;"> 地址： {{s.address}}</p>
+								<br>
+				              <br><br><hr><br><br>
+							</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+
+<div id="photo-content">
+
+<div id="D_photoGallery_commentsWrapper">
+
+<h3>评论区</h3>
+<div id="D_photoGallery_commentsFormWrapper">
+
+<h3>发表一下您的评论：</h3>
+<form method="POST" action="/comment/" id="D_photoGallery_commentsForm">
+<textarea class="maxChars4900 hasMaxLen maxLenAdded" name="content" id="D_photoGallery_commentsTextarea"></textarea>
+{%  csrf_token %}
+<input type="hidden" value="{{s.id}}"  name="sid">
+<input type="submit" id="D_photoGallery_commentsSubmit" class="D_submit" value="发表评论" name="submit">
+</form>
+
+</div>
+<ul id="D_photoGallery_comments">
+
+
+	{% for c in cms %}
+	<li class="D_photoGallery_comment">
+		<div class="commentMemberPhoto">
+			<a href="">
+				<img src="/static/images/tmp/avatar/80/叶含嫣.jpg">
+			</a>
+		</div>
+		<div class="commentContent">
+			<span class="commentAuthor">
+				<a href="members.html" class="commentAuthorAnchor">{{c.user.username}}</a>
+			</span>
+			<span class="commentMetadata"> 发表于 {{c.addtime}} </span>
+			<p class="commentText">{{c.content}} </p>
+			
+		</div>
+	</li>
+	{% endfor %}
+
+	<li class="D_photoGallery_comment">
+		<div class="commentMemberPhoto">
+			<a href="">
+				<img src="/static/images/tmp/avatar/80/扈三娘.jpg">
+			</a>
+		</div>
+		<div class="commentContent">
+			<span class="commentAuthor">
+				<a href="members.html" class="commentAuthorAnchor">三亚的蓝天</a>
+			</span>
+			<span class="commentMetadata"> 发表于 2019年3月30日  14:23</span>
+			<p class="commentText">这个地方很有名，很期待这次的旅行!</p>
+
+		</div>
+	</li>
+
+	</ul>
+
+</div>
+
+</div> <!-- #photo-content -->
+</div> <!-- .doc-content -->
+</div><!-- .doc-box -->
+
+
+</div>
+
+
+ 
+<div id="C_nav">
+<div class="doc-box " id="C_metabox">
+
+
+<div class="doc-content">
+<div id="topic-box-2012" data-original-title="" class="topic-widget-root">
+<h4>购买须知：</h4>
+
+<div class="meta-topics-block small margin-bottom">
+
+<div class="small" id="topicList13">
+旅游网会在必要时修改服务条款，如制订、修改本协议及/或各类规则向用户提供基于互联网以及移动网的相关服务的，应在本页面及其相应页面提前公布通知，用户应该定期登陆本页面及其他相关页面，了解最新的协议内容。变更后的协议和规则在本页面及相关页面公布后七天，将自动生效。
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div><!-- C_context -->
+</div><!-- C_pageBody -->
+</div>
+
+		<style>
+			.ellipsize{
+				font-size: 23px;
+				color: #ec1611;
+			}
+		</style>
+		<div id="fb-root">
+			<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="/static/js/lib/bootstrap-dropdown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

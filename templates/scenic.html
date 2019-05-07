@@ -1,0 +1,59 @@
+{%  include "header.html" %}
+		
+		<div id="C_page" class="lt">
+			<div id="C_pageBody">
+
+			<div>
+						<h4 class="margin-bottom">热门景点：</h4>
+						<ul class="name-card your-mugs search-card cardList cardListResponsive has2 has2-at-medium has1-at-handheld" data-view="card">
+							
+						{%  for i in slist %}
+							<li class="simple-card-li round">
+								<div class="simple-card">
+									<a href="/item/{{i.id}}" class="card-photo nametag-photo" style="background-image: url(/{{i.pic}});">
+										<div class="nametag-photo-name ">
+											<h3 class="margin-bottom padding-none loading">
+												{{i.name}}
+											</h3>
+										</div>
+									</a>
+									<div class="ffbox ffbox--fixed">
+										<div class="ffbox-flex doc-content" style="position: relative;">
+											<h4 class="ellipsize">
+												&yen;{{i.price}}
+											</h4>
+											<p class="muted small">
+												{{i.address}}
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						{%  endfor  %}
+							
+						
+						</ul>
+					</div>	
+			
+			</div>
+		</div>
+		<style>
+			.ellipsize{
+				font-size: 16px;
+				color: #ec1611;
+			}
+		</style>
+		<div id="fb-root">
+			<p>&copy;2019  旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+		</div>
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		<script src="/static/js/lib/bootstrap-dropdown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#nav-profile .dropdown-toggle").dropdown();
+			});
+		</script>
+
+	</body>
+</html>

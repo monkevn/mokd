@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<title>臻享生活-旅游网</title>
+		<!--reset.css-->
+		<link rel="stylesheet" href="/static/css/reset.css" type="text/css" />
+		<!--1024以上屏幕-->
+		<link rel="stylesheet" href="/static/css/modern.css" type="text/css" />
+		<!--ie兼容-->
+		<!--[if IE 6]>
+		<link rel="stylesheet" href="" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+		<link rel="stylesheet" href="" type="text/css" />
+		<![endif]-->
+		
+		<!--icons-->
+		<link rel="shortcut icon" href="/static/images/favicon.ico">
+		<link rel="apple-touch-icon" href="">
+		<link rel="apple-touch-icon" sizes="76x76" href="">
+		<link rel="apple-touch-icon" sizes="120x120" href="">
+		<link rel="apple-touch-icon" sizes="152x152" href="">
+		
+
+	</head>
+
+	<!--[if lt IE 7 ]> <body class="ie6 "> <![endif]-->
+	<!--[if IE 7 ]>  <body class="ie7 "> <![endif]-->
+	<!--[if IE 8 ]> <body class="ie8 "> <![endif]-->
+	<!--[if IE 9 ]> <body class="ie9 "> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<body class="">
+		<!--<![endif]-->
+		
+		<div id="C_header">
+			<div id="C_headerBody">
+				<div id="C_logo">
+					<a href="/" style="text-decoration: none"> 
+					 <h2 style="padding-top: 5px">旅游网</h2>
+						<!-- <img src="/static/images/logo.jpg" width="auto" height="45" alt="Meetup" />  -->
+					</a>
+				</div>
+				
+
+			</div>
+		</div>
+		{{wrong|safe}}
+		<div id="C_join" class="with-bg ">
+			<form id="baseSignUp" class="signUp sequence-prompt prompt-active" method="post" action="/login/" style="display: block; height: 631px;">
+				<div id="emailAndPassword" class="doc-box prompt-panel animate" style="margin-left: -200px; margin-top: 30px; display: block;">
+					<div class="heading">
+      					<h1>登&nbsp;录</h1>
+      				</div>
+				  <div class="minimal-wrapper">
+				    <div class="minimal-body">
+				      <div class="MinimalLoginForm"><div class="signin">
+				    <form method="post" class="minimal-form" action="/Login.action" name="login_form" id="login_form"><ol>
+				        <li class="Row">
+				          <label for="username">邮箱或手机号</label>
+				          <div id="email-wrapper">
+				            <input type="text" class="TextInput TextInput_large" name="username" maxlength="255" id="username"><script type="text/javascript">setTimeout(function(){try{var z=document.getElementById('username');z.focus();z.select();}catch(e){}},1);</script></div>
+				        </li>
+				        <li class="Row">
+				          <label for="password">密码</label>
+				          <div id="password-wrapper">
+				            <input type="password" class="TextInput TextInput_large" name="password" maxlength="64" id="password"></div>
+				        </li>
+				        <li class="checkbox-container SwitchInput Row">
+				            <input type="checkbox" class="checkbox" value="true" name="rememberMe" id="rememberMe"><label for="rememberMe">下次自动登录</label>
+				          </li>
+				        <li>
+				            <input type="submit" class="button primary button-big" value="登录" name="login" id="login"></li>
+				        </ol>
+				      <a class="forgot-password display-none" target="_top" href="/">
+				         忘记密码?</a>
+				     {% csrf_token %}
+				     </div>
+				     </form>
+				     </div>
+				  </div></div>
+				  </div>
+
+				     
+				</div>
+			</form>
+			<div id="fb-root">
+			<p>&copy;2019 旅游网 All rights reserved. </p>
+			<p>旅游网 版权所有</p>
+			</div>
+		</div>	
+		
+
+		
+		<script src="/static/js/lib/jquery.1.10.1.min.js"></script>
+		
+		
+
+	</body>
+</html>

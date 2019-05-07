@@ -1,0 +1,608 @@
+/*header*/
+#C_header {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    height: 4.4em;
+    min-width: 950px;
+    position: relative;
+}
+#C_headerBody {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+}
+/*logo*/
+#C_logo {
+    left: 1em;
+    position: absolute;
+    top: 6px;
+    z-index: 999;
+}
+/*顶部导航条右侧*/
+#C_userNav {
+    
+    line-height: 2em;
+    position: absolute;
+    right: 1em;
+    top: 5px;
+}
+
+#C_userNav #C_userLinks.inlineblockList > li {
+    vertical-align: top;
+}
+.C_userNavItem.C_userTopNavItem {
+    margin-right: 20px;
+}
+.inlineblockList > li {
+    display: inline-block;
+}
+#C_userNav #C_userLinks #nav-profile {
+    float: left;
+}
+
+#C_userNav #C_userLinks #nav-profile .nav-avatar {
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 4px 0 4px 5px;
+    position: relative;
+    width: 54px;
+}
+.avatar {
+    background-color: rgba(0, 0, 0, 0.47);
+    background-position: center 42%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-size: 32px;
+    height: 48px;
+    overflow: hidden;
+    text-indent: 100%;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 48px;
+}
+.avatar--person {
+    border-radius: 80px;
+}
+.avatar--small {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+}
+#C_userNav #C_userLinks #nav-profile .nav-avatar .icon-drop-down {
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 10px;
+    position: absolute;
+    right: 7px;
+    top: 17px;
+}
+/*nav-messages*/
+#C_userNav #C_userLinks #nav-messages .unreadConvosCount {
+    background-color: #e2373c;
+    border-radius: 8px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 11px;
+    left: 14px;
+    line-height: 16px;
+    min-width: 8px;
+    opacity: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: scale(0.3);
+    transition: all 0.2s ease-in-out 0.6s;
+}
+#C_userNav #C_userLinks #nav-messages .unreadConvosCount[data-count="0"] {
+    display: none;
+}
+#C_userNav #C_userLinks #nav-messages .unreadConvosCount.bubbleAnimation {
+    opacity: 1;
+    transform: scale(1);
+}
+#C_userNav #C_userLinks #nav-messages .icon-messaging-messages,#C_userNav #C_userLinks #nav-notifications .icon-notifications,#C_userNav #C_userLinks #nav-about .dropdown-toggle .icon-more {
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 24px;
+    line-height: 50px;
+}
+#C_userNav #C_userLinks #nav-messages .icon-messaging-messages:hover,#C_userNav #C_userLinks #nav-notifications .icon-notifications:hover,#C_userNav #C_userLinks #nav-about .dropdown-toggle .icon-more:hover {
+    color: #2a9bc7;
+}
+#C_userNav #C_userLinks #nav-profile .nav-avatar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#C_userNav #C_userLinks #nav-profile .nav-avatar:hover .icon-drop-down {
+    color: #2a9bc7;
+}
+/*nav-notifications*/
+#C_userNav #C_userLinks #nav-notifications .unreadNotifCount {
+    background-color: #e2373c;
+    border-radius: 8px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    left: 10px;
+    line-height: 16px;
+    min-width: 8px;
+    opacity: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: scale(0.3);
+    transition: all 0.2s ease-in-out 0.6s;
+}
+#C_userNav #C_userLinks #nav-notifications .unreadNotifCount[data-count="0"] {
+    display: none;
+}
+#C_userNav #C_userLinks #nav-notifications .unreadNotifCount.bubbleAnimation {
+    opacity: 1;
+    transform: scale(1);
+}
+
+ 
+#C_userNav #C_userLinks #nav-notifications .dropdown-menu {
+    margin-top: 8px;
+    width: 360px;
+}
+#C_userNav #C_userLinks #nav-notifications .dropdown-menu:after, #C_userNav #C_userLinks #nav-notifications .dropdown-menu:before {
+    left: 282px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifList {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#C_userNav #C_userLinks #nav-notifications .notifLabel {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 13px;
+    font-variant: small-caps;
+    line-height: 1;
+    padding: 16px;
+}
+#C_userNav #C_userLinks #nav-notifications .timeLabel {
+    font-size: 10px;
+    white-space: nowrap;
+}
+#C_userNav #C_userLinks #nav-notifications .notifContent {
+    font-size: 14px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifWrapper {
+    padding: 16px 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifAvatar {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifText {
+    margin: 0;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem {
+    background-color: #ececec;
+    border-top: 1px solid #fff;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem.notifItem--unread {
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem.notifItem--empty {
+    background-color: #ececec;
+    min-height: 60px;
+    padding-top: 18px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem a:hover {
+    background-color: #d6f5ff;
+    color: rgba(0, 0, 0, 0.67) !important;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem:first-child {
+    border-top: 0 none;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem a {
+    text-decoration: none;
+}
+/*顶部导航条左侧*/
+#C_globalNav  a{
+	/* float:left;
+	position:relative; */
+	height:4.4em;
+}
+#C_globalNav {
+}
+#C_tabs {
+    height: 4.4em;
+	margin-left:-180px;
+}
+#C_tabs a:hover, #C_tabs a:link, #C_tabs a:visited {
+    display: inline-block;
+    font-weight: 700;
+    /* height: 4.4em; */
+    /* text-align: left; */
+    white-space: nowrap;
+}
+#C_tabs a:hover,#C_tabs a.selected {
+    background: none repeat scroll 0 0 #FC9223;
+    text-decoration: none;
+}
+#C_tabs .C_tabContent {
+    /* display: inline-block; */
+}
+.C_topBig {
+    color: #FC9223;
+    display: block;
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 2.4em;
+}
+.C_topSm {
+    color: #bbb;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+}
+#C_tabs a:hover .C_topBig, #C_tabs a:hover .C_topSm,#C_tabs a.selected .C_topBig {
+    color: #fff;
+}
+
+
+/*****************下拉列表 
+ */
+.dropdown {
+    font-size: 16px;
+    line-height: 1.3em;
+    position: relative;
+    width: auto;
+}
+.dropdown .dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 3px 3px;
+    box-sizing: border-box;
+    display: none;
+    list-style: none outside none;
+    margin-top: -1px;
+    min-width: 100%;
+    padding: 0 9px 18px;
+    position: absolute;
+    top: 100%;
+    z-index: 3000;
+}
+.dropdown.open .dropdown-menu, .dropdown.hoverable:focus .dropdown-menu, .dropdown.hoverable:hover .dropdown-menu {
+    display: block;
+}
+.dropdown .dropdown-menu li {
+    box-sizing: border-box;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0 9px;
+}
+.dropdown .dropdown-menu li a {
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #555;
+    display: block;
+    font-weight: 400;
+    padding: 9px;
+}
+.dropdown .dropdown-menu li a.selected {
+    color: #f15923 !important;
+    font-weight: 700;
+}
+.dropdown .dropdown-menu li a:hover {
+    background: none repeat scroll 0 0 #f15923;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.dropdown.callout .dropdown-menu {
+    border: medium none;
+    border-radius: 3px;
+    box-shadow: 0 -3px 5px 5px #e8e8e8;
+    margin-top: 20px;
+    padding-top: 18px;
+}
+.dropdown.callout .dropdown-menu.bordered {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.dropdown.callout.open .dropdown-menu.bordered:after, .dropdown.callout.open .dropdown-menu:before {
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    left: 20px;
+    line-height: 0;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.dropdown.callout.open .dropdown-menu.bordered:before {
+    border-color: transparent transparent rgba(0, 0, 0, 0.1);
+    border-width: 0 11px 11px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.dropdown.callout.open:after {
+    content: none;
+    display: none;
+}
+
+
+/*顶部导航条下拉列表*/
+#C_userNav #C_userLinks .dropdown {
+    position: static;
+}
+#C_userNav #C_userLinks #nav-messages,#C_userNav #C_userLinks #nav-notifications {
+    position: relative;
+}
+#C_userNav #C_userLinks .dropdown .dropdown-menu {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+    right: 0;
+    top: auto;
+}
+#C_userNav #C_userLinks .dropdown .dropdown-menu li {
+    padding: 0;
+}
+#C_userNav #C_userLinks .dropdown .dropdown-menu li a {
+    border-radius: 0;
+}
+
+#C_userNav #C_userLinks #nav-profile .dropdown-menu {
+    margin-top: 12px;
+    padding: 0;
+    width: 512px;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu:after, #C_userNav #C_userLinks #nav-profile .dropdown-menu:before {
+    left: 370px;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu.messagesOffset:after, #C_userNav #C_userLinks #nav-profile .dropdown-menu.messagesOffset:before {
+    left: 485px !important;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu.messagesOffset {
+    /*right: 31px;*/
+}
+
+/*左边参与的小组*/
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu {
+    background-color: #ececec;
+    border-radius: 3px 0 0 3px;
+    margin: 0;
+    min-height: 145px;
+    padding: 5px 0 0;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu ul {
+    padding-left: 0;
+    margin: 0 0 18px;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #f15923;
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 12px 0;
+}
+
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu li a:hover {
+    border-color: #f15923;
+    margin: 0;
+    padding: 12px 20px;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu li:last-child a {
+    border-bottom: 0 none;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #C_groupsMenu p {
+    color: #888;
+}
+/*右边的account links*/
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #nav-account-links {
+    margin: 0;
+    padding: 5px 0;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #nav-account-links li {
+    color: rgba(0, 0, 0, 0.67);
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #nav-account-links li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 12px 0;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #nav-account-links li a:hover {
+    border-color: #f15923;
+    margin: 0;
+    padding: 12px 20px;
+}
+#C_userNav #C_userLinks #nav-profile .dropdown-menu #nav-account-links li:last-child a {
+    border-bottom: 0 none;
+}
+
+
+/*灰色按钮*/
+#C_userNav #C_userLinks .nav-button--gray.small, #C_userNav #C_userLinks .nav-button--white.small {
+    padding: 6px;
+}
+#C_userNav #C_userLinks .small.nav-button--gray, #C_userNav #C_userLinks .small.nav-button--red, #C_userNav #C_userLinks .small.nav-button--white, .small.button, .small.button--black, .small.button--blue, .small.button--green, .small.button--primary, .small.button--white, .small.button-flat, .small.button-flat--black, .small.button-flat--gray, .small.button-flat--green, .small.button-flat--red, .small.button-flat--white, .small.button-photo, .small.button-photo--white, .small.primary, button.small, input.small[type="submit"] {
+    font-size: 12px;
+    padding: 5px 14px;
+}
+#C_userNav #C_userLinks .nav-button--gray {
+    background-color: rgba(64, 64, 64, 0.47);
+    color: #fff;
+}
+#C_userNav #C_userLinks .nav-button--gray:hover {
+    background-color: #e2373c;
+}
+#C_userNav #C_userLinks .nav-button--gray, #C_userNav #C_userLinks .nav-button--gray:active, #C_userNav #C_userLinks .nav-button--red, #C_userNav #C_userLinks .nav-button--red:active, #C_userNav #C_userLinks .nav-button--white, #C_userNav #C_userLinks .nav-button--white:active, .button-flat, .button-flat--black, .button-flat--black:active, .button-flat--gray, .button-flat--gray:active, .button-flat--green, .button-flat--green:active, .button-flat--red, .button-flat--red:active, .button-flat--white, .button-flat--white:active, .button-flat:active, .button-photo, .button-photo--white, .button-photo--white:active, .button-photo:active {
+    box-shadow: none;
+}
+
+#C_userNav #C_userLinks .nav-button--gray, #C_userNav #C_userLinks .nav-button--red, #C_userNav #C_userLinks .nav-button--white, .button, .button--black, .button--blue, .button--green, .button--primary, .button--white, .button-flat, .button-flat--black, .button-flat--gray, .button-flat--green, .button-flat--red, .button-flat--white, .button-photo, .button-photo--white, .button.primary, .primary, button, input[type="submit"], input.D_submit[type="submit"], input.button--black[type="submit"], input.button--blue[type="submit"], input.button--green[type="submit"], input.button--primary[type="submit"], input.primary[type="submit"] {
+    border-radius: 3px;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1 !important;
+    margin-bottom: 18px;
+    padding: 9px 18px 7px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: none;
+    transition: none 0s ease 0s ;
+}
+#C_userNav #C_userLinks .nav-button--gray, #C_userNav #C_userLinks .nav-button--red, #C_userNav #C_userLinks .nav-button--white, .button, .button--black, .button--blue, .button--green, .button--primary, .button--white, .button-flat, .button-flat--black, .button-flat--gray, .button-flat--green, .button-flat--red, .button-flat--white, .button-photo, .button-photo--white, .button.primary, .nav-appendPager, .nav-buttons label, .nav-buttons li > a, .nav-buttons li > span, .primary, .segmented-control-button, .tabControl-link, button, input[type="submit"], input.D_submit[type="submit"], input.button--black[type="submit"], input.button--blue[type="submit"], input.button--green[type="submit"], input.button--primary[type="submit"], input.primary[type="submit"] {
+    -moz-user-select: none;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+/*省略号的下拉列表*/
+#C_userNav #C_userLinks #nav-about .dropdown-menu {
+    margin-top: 8px;
+    min-width: 0;
+    padding: 5px 0 0;
+    right:18px;
+    width: 172px;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu:after, #C_userNav #C_userLinks #nav-about .dropdown-menu:before {
+    left: 145px;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 12px 0;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu li a:hover {
+    border-bottom: 1px solid #e2373c;
+    margin: 0;
+    padding: 12px 20px;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu li.C_userNavItemSmall a {
+    border: 0 none;
+    color: rgba(0, 0, 0, 0.67);
+    font-size: 14px;
+    padding: 6px 0;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu li.C_userNavItemSmall a:hover {
+    padding: 6px 20px;
+}
+#C_userNav #C_userLinks #nav-about .dropdown-menu li.C_userNavItemLast {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.47);
+    display: block;
+    font-size: 12px;
+    line-height: inherit;
+    padding: 9px 20px;
+}
+
+/*铃铛的下拉列表*/
+#C_userNav #C_userLinks #nav-notifications .unreadNotifCount {
+    background-color: #e2373c;
+    border-radius: 8px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    left: 10px;
+    line-height: 16px;
+    min-width: 8px;
+    opacity: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: scale(0.3);
+    transition: all 0.2s ease-in-out 0.6s;
+}
+#C_userNav #C_userLinks #nav-notifications .unreadNotifCount[data-count="0"] {
+    display: none;
+}
+
+#C_userNav #C_userLinks #nav-notifications .icon-notifications {
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 22px;
+    line-height: 50px;
+}
+#C_userNav #C_userLinks #nav-notifications .icon-notifications:hover {
+    color: #2a9bc7;
+}
+#C_userNav #C_userLinks #nav-notifications .dropdown-menu {
+    margin-top: 8px;
+    right: -56px;
+    width: 360px;
+}
+#C_userNav #C_userLinks #nav-notifications .dropdown-menu:after, #C_userNav #C_userLinks #nav-notifications .dropdown-menu:before {
+    left: 282px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifList {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#C_userNav #C_userLinks #nav-notifications .notifLabel {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 13px;
+    font-variant: small-caps;
+    line-height: 1;
+    padding: 16px;
+}
+#C_userNav #C_userLinks #nav-notifications .timeLabel {
+    font-size: 10px;
+    white-space: nowrap;
+}
+#C_userNav #C_userLinks #nav-notifications .notifContent {
+    font-size: 14px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifWrapper {
+    padding: 16px 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifAvatar {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifText {
+    margin: 0;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem {
+    background-color: #ececec;
+    border-top: 1px solid #fff;
+    padding: 0;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem.notifItem--unread {
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem.notifItem--empty {
+    background-color: #ececec;
+    min-height: 60px;
+    padding-top: 18px;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem a:hover {
+    background-color: #d6f5ff;
+    color: rgba(0, 0, 0, 0.67) !important;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem:first-child {
+    border-top: 0 none;
+}
+#C_userNav #C_userLinks #nav-notifications .notifItem a {
+    text-decoration: none;
+}

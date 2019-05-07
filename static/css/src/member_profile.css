@@ -1,0 +1,1262 @@
+.popPhoto-body {
+    overflow: hidden;
+}
+.popPhoto-wrapper {
+    display: none;
+    left: 0;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 5002;
+}
+.popPhoto-wrapper.activated, .popPhoto-wrapper.activated .popPhoto-dialog {
+    display: block;
+}
+.popPhoto-backdrop {
+    background-color: #333;
+    display: none;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+}
+.popPhoto-backdrop.activated {
+    display: block;
+}
+.popPhoto-dialog {
+    background-color: #fff;
+    border: 1px solid #9a9a9a;
+    border-radius: 5px;
+    display: none;
+    left: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    width: 958px;
+    z-index: 5002;
+}
+.popPhoto-dialog.lightweight {
+    width: 516px;
+}
+.popPhoto-dialog.lightweight .popPhoto-left-pane {
+    border-right: 0 none;
+}
+.popPhoto-dialog.lightweight .actionables, .popPhoto-dialog.lightweight .popPhoto-right-pane {
+    display: none;
+}
+.popPhoto-tag-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.popPhoto-metadata {
+    border-bottom: 1px dotted #ddd;
+    margin-top: 11px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.popPhoto-metadata .caption {
+    color: #000;
+    font-size: 18px;
+    max-width: 400px;
+    padding-top: 8px;
+}
+.popPhoto-metadata .caption a.myprofile-actions {
+    font-size: 0.7em;
+    font-weight: 400;
+    margin-right: 16px;
+}
+.popPhoto-metadata .caption .confirm-actions {
+    background: none repeat scroll 0 0 #eee;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1em;
+    padding: 0 6px 2px;
+}
+.popPhoto-metadata .caption .confirm-actions a {
+    font-size: 0.6em;
+    font-weight: 400;
+}
+.popPhoto-metadata .caption .confirm-actions a.confirm-del {
+    border-right: 1px dotted #ccc;
+    color: #e51937;
+    margin-right: 4px;
+    padding-right: 4px;
+}
+.popPhoto-metadata .caption .confirm-actions a.confirm-cnl {
+    color: #888;
+}
+.popPhoto-metadata .addedBy {
+    display: block;
+    font-size: 11px;
+    margin-top: 3px;
+}
+.popPhoto-head {
+    background-color: #555;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 13px;
+    padding: 10px;
+    position: relative;
+}
+.popPhoto-close {
+    color: #fff !important;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.popPhoto-close:hover {
+    color: #3987cb !important;
+    text-decoration: none;
+}
+.popPhoto-left-pane {
+    border-right: 1px solid #ddd;
+    float: left;
+    margin-left: 12px;
+    padding-right: 10px;
+    text-align: center;
+    width: 590px;
+}
+.popPhoto-left-pane .right-info {
+    float: right;
+}
+.popPhoto-left-pane .left-info {
+    float: left;
+}
+.popPhoto-left-pane .popPhoto-next, .popPhoto-left-pane .popPhoto-prev {
+    background-color: #eee;
+    color: #333;
+    float: left;
+    padding: 10px;
+}
+.popPhoto-left-pane .popPhoto-count {
+    float: left;
+    padding: 10px 10px 0;
+}
+.popPhoto-left-pane img {
+    max-height: 425px;
+    max-width: 560px;
+}
+.popPhoto-left-pane .photo-wrapper-thing {
+    background-color: #eee;
+    display: table-cell;
+    height: 325px;
+    padding: 13px;
+    vertical-align: middle;
+    width: 464px;
+}
+.popPhoto-left-pane .photo-tag {
+    display: block;
+    height: 160px;
+    min-width: 160px;
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+}
+.popPhoto-left-pane .photo-tag:hover {
+    opacity: 1;
+}
+.popPhoto-left-pane .photo-tag:hover .member-name {
+    top: -30px;
+}
+.popPhoto-left-pane .photo-tag .member-name {
+    background-color: #555;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    padding: 5px;
+    position: relative;
+    top: -100px;
+    white-space: nowrap;
+}
+.popPhoto-left-pane .photo-tag .down-arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 11px solid #555;
+    bottom: -9px;
+    height: 0;
+    left: 36%;
+    position: absolute;
+    width: 0;
+}
+.popPhoto-left-pane .actionables {
+    text-align: left;
+}
+.lightweight .popPhoto-left-pane {
+    width: 490px;
+}
+.popPhoto-right-pane {
+    float: right;
+    margin-right: 10px;
+    width: 326px;
+}
+.lightweight .popPhoto-right-pane {
+    width: 426px;
+}
+.popPhoto-comment-stream {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.popPhoto-comment-stream .members-only {
+    padding: 3px;
+}
+.popPhoto-comment {
+    border-bottom: 1px dotted #ddd;
+    display: block;
+    margin-bottom: 4px;
+    padding: 4px;
+    width: 318px;
+}
+.popPhoto-comment img {
+    float: left;
+    margin-top: 3px;
+    max-height: 40px;
+    max-width: 40px;
+}
+.popPhoto-comment .popPhoto-comment-content {
+    float: right;
+    width: 270px;
+}
+.popPhoto-comment textarea {
+    border: 1px solid #999;
+    height: 3em;
+    width: 313px;
+}
+.popPhoto-comment .D_submit {
+    float: right;
+    margin: 6px 2px 6px 0;
+}
+.popPhoto-comment .limit-container {
+    float: left;
+    margin-top: 12px;
+}
+.popPhoto-comment .limit {
+    color: #444;
+}
+.comment-author {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.comment-meta-info {
+    color: #444;
+    font-size: 10px;
+    margin-top: 3px;
+}
+#D_memberProfileAside {
+    width: 240px;
+}
+#D_memberProfileAside .contactMember img {
+    margin-right: 6px;
+}
+#D_memberProfileAside .D_shoutIcon {
+    margin-right: 3px;
+}
+#D_memberProfileAside .blockBuddy {
+    padding-left: 25px !important;
+}
+#D_memberProfileAside .addAsFriend {
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+#D_memberProfileAside .addAsFriend a {
+    padding-left: 25px !important;
+}
+#D_memberProfilePostGreeting {
+    background: none repeat scroll 0 0 #fafafa;
+    border: 1px solid #ddd;
+    margin: 0.5em 0;
+    padding: 0;
+}
+#D_memberProfilePostGreeting .element {
+    border: medium none;
+    margin-bottom: 0;
+}
+#D_memberProfilePostGreeting textarea {
+    float: left;
+    height: 1.6em;
+    margin-right: 0.5em;
+    width: 83%;
+}
+#D_memberProfilePostGreeting .D_submit {
+    margin-top: 1px;
+}
+#D_memberProfilePostGreeting .limit-container {
+    clear: both;
+    line-height: 0.9em;
+    margin-top: 0.5em;
+}
+.handleTransition * {
+    display: none;
+}
+#D_memberProfilePostGreeting .element {
+    padding: 0.6em 1em 0.9em;
+}
+#D_memberProfileInteract {
+    padding: 0.6em 0 0;
+}
+#D_memberProfileFriends {
+    padding: 0.8em 0 0;
+}
+#D_memberProfileInteract ul {
+    list-style: none outside none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.D_memberProfilePhoto {
+    margin-bottom: 0.5em;
+}
+.D_memberProfileContentItem {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+}
+.D_memberProfileContentChunk {
+    border-top: 1px solid #ddd;
+    clear: both;
+    margin-top: 0.85em;
+    padding-top: 1em;
+}
+#D_memberProfile .minimal {
+    border-top: medium none !important;
+}
+.D_memberProfileHdrThumbnail img {
+    float: left;
+    margin-right: 1.25em;
+    min-height: 60px;
+}
+#D_memberProfile .D_actions {
+    overflow: hidden;
+}
+#D_memberFeedContainer {
+    position: relative;
+}
+#D_memberFeedContainer .D_absPosWrapper {
+    position: static;
+}
+#D_memberFeedContainer .D_memberFeedPrivacy {
+    position: absolute;
+    right: 3px;
+    top: 8px;
+}
+#D_memberFeedContainer .D_memberFeedPrivacy li {
+    padding: 0.25em 0 0 1.25em !important;
+}
+#D_memberFeedContainer .D_itemContext .item-header-nogroup a {
+    color: #2175b1;
+}
+#paymentOpts td {
+    vertical-align: middle !important;
+}
+.showLessTopics, .showMoreTopics {
+    font-weight: 700;
+    white-space: nowrap;
+}
+.D_follow {
+    margin-top: 0.5em;
+}
+.D_follow img {
+    width: 15px;
+}
+.hasJS #D_groupMemberProfile .title form a {
+    display: inline;
+}
+.greetings-box {
+    margin: 2em 0 0;
+}
+.greetings-box #older-greetings .feed-pager-link {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid #3987cb;
+    display: inline;
+    height: 0;
+    margin-left: 6px;
+    padding: 0 !important;
+    position: relative;
+    right: 0;
+    top: 1em;
+    width: 0;
+}
+#D_rsvpDetails {
+    border: 1px solid #ccc;
+}
+#D_rsvpDetails .rsvpDetails-empty {
+    color: #888;
+    padding: 12px 0 0;
+}
+#D_rsvpDetails .rsvpDetails-content {
+    border: 1px solid #ccc;
+    max-height: 400px;
+    overflow: auto;
+}
+#D_rsvpDetails table.D_tabular tbody td.D_subject .D_title {
+    font-weight: 400;
+}
+#D_rsvpDetails table.D_tabular .D_subject p img.D_icon {
+    height: auto;
+    width: auto;
+}
+#D_rsvpDetails table.D_tabular .D_subject .member-comment {
+    color: #666;
+}
+#D_rsvpDetails table.D_tabular .D_subDivision td {
+    background-color: #e6e6e6;
+    padding: 0.25em 0.75em;
+}
+#D_groupMemberProfile .lcol .inner-col .docSection.gmp-boxhead ul.D_actions.clearfix.inlineList {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    margin-bottom: 12px;
+}
+#D_groupMemberProfile .lcol .inner-col .docSection.gmp-boxhead ul.D_actions.clearfix.inlineList li.canDo {
+    font-size: 10px;
+    margin-right: 1em;
+}
+#D_groupMemberProfile .lcol .inner-col .docSection.gmp-boxhead h1{
+	display:inline-block;
+}
+
+#D_groupMemberProfile .lcol .inner-col .docSection.gmp-boxhead a{
+	float: right;
+}
+#D_groupMemberProfile .lcol .inner-col .docSection.gmp-boxhead h1 a{
+	font-size:14px;
+	margin-left:20px;
+	float:none;
+}
+#D_groupMemberProfile .limit {
+    color: #888;
+}
+#D_groupMemberProfile a:hover {
+    text-decoration: underline;
+}
+#D_groupMemberProfile .subtext {
+    color: #888;
+}
+#D_groupMemberProfile .photo-nav-links {
+    background-color: #eee;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+#D_groupMemberProfile .photo-nav-links li {
+    border-color: #ddd;
+}
+#D_groupMemberProfile .photo-nav-link {
+    line-height: 2;
+}
+#D_groupMemberProfile .no-greetings {
+    margin-top: 6px;
+    padding-left: 6px;
+}
+#D_groupMemberProfile #D_memberProfileQuestions {
+    padding: 0 0 4px;
+}
+#D_groupMemberProfile #D_memberProfileQuestions .dues .D_actions.inlineList {
+    border-bottom: medium none;
+    border-top: medium none;
+}
+#D_groupMemberProfile #D_memberProfileQuestions .dues .D_actions.inlineList li.canDo:first-child {
+    margin: 0;
+}
+#D_groupMemberProfile #D_memberProfileQuestions ul.D_actions.inlineblockList li.avoidDo {
+    font-size: 13px;
+    margin-right: 1em;
+}
+#D_groupMemberProfile .dotted-section {
+    margin-bottom: 2em;
+}
+#D_groupMemberProfile .D_memberTitle {
+    color: #888;
+    font-weight: 400;
+}
+#D_groupMemberProfile .title {
+    padding: 2px 0;
+}
+#D_groupMemberProfile .title form {
+    display: block;
+}
+#D_groupMemberProfile .title form a {
+    display: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+#D_groupMemberProfile .title form input.D_submit {
+    font-size: 13px;
+    padding: 0.25em 1em;
+}
+#D_groupMemberProfile .D_less.storytime {
+    margin: 12px 0;
+}
+#D_groupMemberProfile a.D_socialNetworksList {
+    text-decoration: none;
+}
+#D_groupMemberProfile .D_socialNetworksList {
+    padding: 4px 0 0;
+}
+#D_groupMemberProfile .D_socialNetworksList a {
+    display: block;
+    float: left;
+    height: 24px;
+    margin-right: 4px;
+    width: 24px;
+}
+#D_groupMemberProfile .D_socialNetworksList .badge-twitter-24 {
+    background: url("/img/9977034600688010838015/externalservice/socialmediaicons/twitter-24x24.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#D_groupMemberProfile .D_socialNetworksList .badge-facebook-24 {
+    background: url("/img/306672844507859061592/externalservice/socialmediaicons/facebook-24x24.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#D_groupMemberProfile .D_socialNetworksList .badge-tumblr-24 {
+    background: url("/img/605875534503026578645/externalservice/socialmediaicons/tumblr-24x24.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#D_groupMemberProfile .D_socialNetworksList .badge-linkedin-24 {
+    background: url("/img/01846402914098853229/externalservice/socialmediaicons/linkedin-24x24.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#D_groupMemberProfile .D_socialNetworksList .badge-flickr-24 {
+    background: url("/img/8159016801340082310/externalservice/socialmediaicons/flickr-24x24.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#D_groupMemberProfile .D_memberProfileGroups, #D_groupMemberProfile .interest-topics {
+    background-color: #eee;
+}
+#D_groupMemberProfile .D_memberProfileGroups .D_actions, #D_groupMemberProfile .interest-topics .D_actions {
+    margin: 0;
+}
+#D_groupMemberProfile .D_memberProfileGroups .D_actions a, #D_groupMemberProfile .interest-topics .D_actions a {
+    font-weight: 400;
+}
+#D_groupMemberProfile .D_memberProfileGroups .D_actions li.canDo a, #D_groupMemberProfile .interest-topics .D_actions li.canDo a {
+    line-height: 1;
+}
+#D_groupMemberProfile .interest-topics .block-list-header ul.D_actions li.canDo {
+    line-height: 1;
+    margin-left: 0;
+}
+#D_groupMemberProfile .D_memberProfileSocial {
+    margin-bottom: 2px;
+}
+#D_groupMemberProfile .D_memberProfileSocial li a {
+    font-size: 13px;
+}
+#D_groupMemberProfile #memberOwnPhotoOnlyOne div a, #D_groupMemberProfile #memberOwnPhotosListWider div a {
+    border: 1px solid #ccc !important;
+    display: block;
+    height: 298px;
+    text-decoration: none;
+    width: 223px;
+}
+#D_groupMemberProfile .managePhotos {
+    padding-left: 25px !important;
+}
+#D_groupMemberProfile .D_memberProfileContentItem {
+    padding-bottom: 1.1em;
+    padding-top: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+#D_groupMemberProfile .D_memberProfileContentItem p {
+    color: #666;
+    margin: 0;
+}
+#D_groupMemberProfile .D_memberProfileContentItem p.D_empty, #D_groupMemberProfile .D_memberProfileContentItem span.D_empty {
+    color: #888;
+}
+#D_groupMemberProfile a.D_inlineAction:link, #D_groupMemberProfile a.D_inlineAction:visited {
+    color: #3987cb;
+    font-size: 13px;
+    font-weight: 400;
+}
+#D_groupMemberProfile #D_memberProfileMeta {
+    padding: 0 0 4px;
+}
+#D_groupMemberProfile #D_memberProfileMeta p {
+    color: #666;
+}
+#D_groupMemberProfile #D_memberProfileMeta p a.D_firstInlineAction {
+    display: inline-block;
+    margin-top: 0.25em;
+}
+#D_groupMemberProfile .D_boxhead {
+    margin-bottom: 12px;
+    overflow: visible;
+    padding: 0;
+}
+#D_groupMemberProfile #D_memberProfileAside {
+    width: auto;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 0;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting .input {
+    background-color: #efefef;
+    padding: 6px;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting .element {
+    border: medium none;
+    margin-bottom: 0;
+    padding: 4px 0 0;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting textarea {
+    border: 1px solid #ccc;
+    height: 48px;
+    margin-right: 0;
+    max-height: 68px;
+    outline: 0 none;
+    padding: 4px;
+    resize: none;
+    width: 98%;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting .D_submit {
+    margin-top: 1px;
+}
+#D_groupMemberProfile #D_memberProfilePostGreeting .limit-container {
+    clear: both;
+    float: left;
+    line-height: 0.9em;
+    margin-top: 4px;
+    padding-left: 6px;
+}
+#D_groupMemberProfile #greeting-list.D_summaryList .D_yell {
+    position: relative;
+}
+#D_groupMemberProfile #greeting-list.D_summaryList .D_yell .D_actions {
+    bottom: 7px;
+    display: none;
+    position: absolute;
+    right: -5px;
+}
+#D_groupMemberProfile #greeting-list.D_summaryList .D_yell:hover .D_actions {
+    display: block;
+}
+#D_groupMemberProfile #greeting-list .figureset-description .D_actions {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+}
+#D_groupMemberProfile .lcol {
+    float: left;
+    width: 63%;
+}
+#D_groupMemberProfile .lcol .inner-col {
+    padding: 0 15px 15px 0;
+}
+#D_groupMemberProfile .rcol {
+    float: left;
+    width: 37%;
+}
+#D_groupMemberProfile .rcol .inner-col {
+    padding: 0 0 15px 15px;
+}
+#D_groupMemberProfile .profileImageContainer {
+    background: none repeat scroll 0 0 #eee;
+    min-width: 240px;
+    overflow: hidden;
+    padding: 10px 0 5px;
+    text-align: center;
+}
+#D_groupMemberProfile .profileImageContainer a {
+    display: inline-block;
+    min-width: 240px;
+}
+#D_groupMemberProfile .profileImageContainer img {
+    margin: 0;
+    max-width: 220px;
+}
+#D_groupMemberProfile .social-connections {
+    margin-top: 12px;
+}
+#D_groupMemberProfile .social-connections li {
+    background-image: url("/img/0941083034016068/thumb_bg_many.png");
+    background-position: -4px -2px;
+    background-repeat: no-repeat;
+}
+#D_groupMemberProfile .social-connections li.single-item {
+    background-image: url("/img/699190935622537696122/thumb_bg_single.png");
+    background-position: -4px -2px;
+    background-repeat: no-repeat;
+}
+#D_groupMemberProfile .social-connections li.single-item .D_image a {
+    margin-top: 7px;
+}
+#D_groupMemberProfile .social-connections .mem-photo-small {
+    border-width: 0;
+    margin-top: 4px;
+}
+#D_groupMemberProfile .social-connections .extra-items {
+    display: none;
+}
+#D_groupMemberProfile.sitewide .lcol {
+    width: 70%;
+}
+#D_groupMemberProfile.sitewide .rcol {
+    width: 30%;
+}
+#D_groupMemberProfile.sitewide .profileImageContainer img {
+    max-width: 100%;
+}
+#D_groupMemberProfile.sitewide .interest-topics {
+    margin: 12px 0 0;
+}
+#D_groupMemberProfile.sitewide #D_memberProfileAside .social-connections {
+    background-color: #eee;
+}
+#D_groupMemberProfile.sitewide #D_memberProfileAside .social-connections ul.D_summaryList li {
+    border-top: 1px solid #fff;
+}
+#D_groupMemberProfile .submitGreetingCont {
+    float: right;
+    margin-top: 6px;
+}
+#D_groupMemberProfile .D_actions {
+    margin: 12px 0 0;
+    padding: 6px 0;
+}
+#D_groupMemberProfile .D_actions ul {
+    float: left;
+}
+#D_groupMemberProfile .D_actions li.canDo {
+    font-weight: 400;
+}
+#D_groupMemberProfile .D_actions li.canDo a {
+    line-height: 20px;
+}
+#D_groupMemberProfile ul.D_actions li.skull_select {
+    padding: 0 0 0 0.5em !important;
+}
+#D_groupMemberProfile .skull_select {
+    float: right;
+}
+#D_groupMemberProfile .skull_select .D_dropdownContent li {
+    display: block;
+    width: 100%;
+}
+#D_groupMemberProfile .skull_select .D_dropdownContent li a {
+    font-size: 13px;
+}
+#D_groupMemberProfile .skull_select .D_dropdownContent li a:hover {
+    text-decoration: none;
+}
+#D_groupMemberProfile .skull_select.admin-actions .D_dropdownContent {
+    left: auto !important;
+    right: -1px;
+    width: 180px;
+}
+#D_groupMemberProfile .skull_select.admin-actions .D_dropdownContent li a {
+    padding: 0 4px;
+}
+#D_groupMemberProfile .skull_select.member-actions .D_dropdownContent {
+    left: auto !important;
+    right: -1px;
+    width: 180px;
+}
+#D_groupMemberProfile .skull_select.member-actions .D_dropdownContent li a {
+    padding: 0 4px;
+}
+#D_groupMemberProfile .skull_select > a {
+    font-size: 13px;
+}
+#D_groupMemberProfile .D_memberProfileGroups {
+    margin: 20px 0;
+}
+#D_groupMemberProfile .D_memberProfileGroups .viewProfile {
+    padding: 10px 0 0;
+}
+#D_groupMemberProfile .profile-nav {
+    background-color: #e9ebe5;
+    border-bottom: 1px solid #ccc;
+    margin: 1px 0 16px;
+    padding: 10px 10px 0;
+}
+#D_groupMemberProfile #D_memberProfileAside .block-list-header {
+    padding: 10px;
+}
+#D_groupMemberProfile #D_memberProfileAside .block-list-header .D_actions li.canDo {
+    line-height: 1;
+}
+#D_groupMemberProfile #D_memberProfileAside .block-list-header .D_actions li.canDo a {
+    font-weight: 400;
+}
+#D_groupMemberProfile #D_memberProfileAside .block-list-header ul.D_actions li {
+    font-size: 10px;
+    padding: 0.25em 0 !important;
+}
+#D_groupMemberProfile #D_memberProfileAside .see-more-groups a {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#D_groupMemberProfile #D_memberProfileAside ul.D_summaryList li {
+    border: medium none;
+}
+#D_groupMemberProfile #D_memberProfileAside .D_memberProfileGroups .D_summaryList .D_info .D_actions li {
+    font-size: 13px;
+    padding-top: 6px !important;
+    text-transform: uppercase;
+}
+#D_groupMemberProfile #D_memberProfileAside .D_memberProfileGroups .D_summaryList .D_info .D_actions a.viewProfile {
+    color: #888;
+}
+#D_groupMemberProfile #D_memberProfileAside .rounded-corner-top {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#D_groupMemberProfile #D_memberProfileAside .other-meetups-footer {
+    background-color: #efefef;
+    margin: 1px 0 10px;
+    padding: 10px;
+}
+#D_groupMemberProfile #D_memberProfileAside .other-meetups-footer .see-more-groups {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 6px 10px;
+    text-align: center;
+}
+#D_groupMemberProfile #D_memberProfileAside .other-meetups-footer .see-more-groups .canDo {
+    margin-left: 0;
+}
+#D_groupMemberProfile #D_memberProfileAside .rounded-corner-bottom {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#D_groupMemberProfile .D_yell {
+    border-color: #efefef;
+    padding: 10px 0;
+}
+#D_groupMemberProfile .D_yell .D_image, #D_groupMemberProfile .D_yell .D_noimage {
+    height: 50px;
+    width: 50px;
+}
+#D_groupMemberProfile .D_yell .D_image a, #D_groupMemberProfile .D_yell .D_noimage a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+#D_groupMemberProfile .D_yell .D_noimage a {
+    background-size: 50px auto;
+}
+#D_groupMemberProfile .D_yell .D_info {
+    margin: 0 0 0 60px;
+}
+#D_groupMemberProfile .D_yell .D_info .groupstamp {
+    color: #bdbdbd;
+    display: block;
+    font-size: 13px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+#D_groupMemberProfile .D_yell .D_info .timestamp {
+    color: #bdbdbd;
+    font-size: 13px;
+}
+#D_groupMemberProfile .D_yell .D_actions li {
+    padding: 0.25em 0.5em 0.25em 0 !important;
+}
+#D_groupMemberProfile .D_yell .D_actions .canDo a {
+    font-size: 13px;
+    font-weight: 400;
+}
+#D_groupMemberProfile.group-profile .D_summaryList .D_group {
+    background-color: #eee;
+}
+#D_groupMemberProfile.group-profile .docSection {
+    border-top: medium none;
+}
+#D_groupMemberProfile.group-profile .docSection .D_actions.inlineList {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+}
+#D_groupMemberProfile.group-profile .docSection.gmp-boxhead, #D_groupMemberProfile.group-profile .docSection.profileQuestionsSection {
+    padding-right: 0;
+}
+#D_groupMemberProfile ul.D_summaryList li.last {
+    border-bottom: 0 none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 0;
+}
+.sitewide #my-meetup-groups-list div.D_group {
+    border-bottom: 0 none;
+    border-top: 1px dotted #ccc;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding-top: 10px;
+    position: relative;
+    vertical-align: top;
+    width: 46%;
+}
+.sitewide #my-meetup-groups-list div.D_group.first {
+    border-top: medium none;
+}
+.sitewide #my-meetup-groups-list div.D_group.display-none {
+    display: none !important;
+}
+.member-role, .member-role a {
+    color: #888;
+    font-size: 13px;
+    font-variant: small-caps;
+    line-height: 1.1;
+    padding-top: 3px;
+    text-transform: lowercase;
+}
+#my-meetup-groups-list.resetList .figureset-figure {
+    min-width: 50px;
+}
+#my-meetup-groups-list.resetList .figureset-figure img {
+    max-width: 50px;
+}
+.privacy {
+    background-color: #e7e7e7;
+    padding: 0.5em;
+}
+.privacy .divby2 .D_col {
+    float: left;
+    width: 49.9%;
+}
+.privacy .divby2 .D_col .D_colbody {
+    margin: 0 0.5em;
+}
+.privacy .divby2 .D_col .D_colbody dl.stats dt {
+    font-weight: 700;
+}
+.privacy .divby2 .D_col .D_colbody .D_yes {
+    color: #62ac75;
+}
+.privacy .privacyMsg {
+    clear: both;
+    color: rgba(0, 0, 0, 0.47);
+    font-size: 0.85em;
+    text-align: center;
+}
+.privacy .privacyMsg p {
+    margin-bottom: 0;
+}
+.D_form div.input {
+    overflow: hidden;
+}
+#D_personalEventHistory {
+    border: 1px solid #ccc;
+}
+#D_personalEventHistory .D_rolodex {
+    border: 1px solid #ccc;
+    max-height: 400px;
+    overflow: auto;
+}
+#D_personalEventHistory .D_rolodex .D_rolodexItem {
+    border-top: 1px solid #ccc;
+    padding: 0.5em;
+}
+#D_personalEventHistory .D_rolodex .D_rolodexItem .attendMark, #D_personalEventHistory .D_rolodex .D_rolodexItem .rsvp {
+    font-weight: 700;
+}
+#D_personalEventHistory .D_rolodex .D_rolodexItem .D_yes {
+    color: #62ac75;
+}
+#D_personalEventHistory .D_rolodex .D_rolodexItem .D_no {
+    color: #999;
+}
+#D_personalEventHistory .D_rolodex .D_rolodexItem:first-child {
+    border-top: medium none;
+}
+#D_personalEventHistory .footElement a {
+    text-decoration: none;
+}
+#D_personalEventHistory .footElement .button.primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.has-perspective {
+    perspective: 800px;
+}
+@keyframes bounceInUp {
+0%, 100%, 60%, 75%, 90% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+0% {
+    opacity: 0;
+    top: 50%;
+}
+60% {
+    opacity: 1;
+    top: 6%;
+}
+75% {
+    top: 12%;
+}
+90% {
+    top: 14%;
+}
+100% {
+    top: 12%;
+}
+}
+@keyframes bounceInUp {
+0%, 100%, 60%, 75%, 90% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+0% {
+    opacity: 0;
+    top: 50%;
+}
+60% {
+    opacity: 1;
+    top: 6%;
+}
+75% {
+    top: 12%;
+}
+90% {
+    top: 14%;
+}
+100% {
+    top: 12%;
+}
+}
+.flashMessages {
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    z-index: 1;
+}
+.flashMessage {
+    border-radius: 3px;
+    display: block;
+    margin: 15px auto;
+    max-width: 200px;
+    padding: 10px 40px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+.flashMessage--warning {
+    background: none repeat scroll 0 0 #e2373c;
+    color: #fff;
+    opacity: 0.7;
+}
+.flashMessage--info {
+    background: none repeat scroll 0 0 #e7e7e7;
+    color: rgba(0, 0, 0, 0.95);
+    opacity: 0.7;
+}
+.flashMessage--success {
+    background: none repeat scroll 0 0 #3987cb;
+    color: #fff;
+    opacity: 0.7;
+}
+.flashMessage--failure {
+    background: none repeat scroll 0 0 #353e47;
+    color: #fff;
+    opacity: 1;
+}
+.flashMessage-icon {
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.flashMessage-close {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+#convoNewContainer .composeBox {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    position: relative;
+    z-index: 0;
+}
+#convoNew-view.dialog {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: visible;
+}
+#convoNew-view.active {
+    animation: 0.5s ease 0s normal none 1 bounceInUp;
+}
+#convoNew-view .muDialog--close {
+    float: none;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+}
+.memberPicker {
+    padding: 0;
+    position: relative;
+    z-index: 10000;
+}
+.memberList-wrapper {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.memberList {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    list-style: none outside none;
+    margin: 0;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.memberList:empty {
+    display: none;
+}
+.recipientTokenizer {
+    margin: 0 4px;
+    padding: 8px;
+}
+.recipients {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-right: 4px;
+}
+.recipients-token {
+    background: none repeat scroll 0 0 #3987cb;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 2px 2px;
+    padding: 0.3em 0.7em 0.2em;
+}
+.recipients-token .remove {
+    display: inline-block;
+}
+.recipients-token .icon {
+    color: #fff;
+    font-size: 0.9em;
+    padding: 0 0 0 0.5em;
+}
+.recipientTokenizer-input {
+    min-width: 60px;
+    overflow: hidden;
+    padding-top: 3px;
+}
+.recipientTokenizer-input input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.recipientTokenizer-input input:focus {
+    border: medium none;
+    box-shadow: none;
+}
+.recipientTokenizer-prompt {
+    color: rgba(0, 0, 0, 0.41);
+    float: left;
+    font-size: 13px;
+    margin-right: 4px;
+    padding-top: 3px;
+}
+.composeBox {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    box-shadow: 0 -15px 20px #fff;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.composeBox-textArea {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    box-shadow: none;
+    font-size: 14px;
+    margin-bottom: 0;
+    max-height: 200px;
+    min-height: 95px;
+    padding: 10px;
+    resize: none;
+    width: 420px;
+}
+.composeBox-textArea::-moz-placeholder {
+    font-style: normal;
+}
+.composeBox-textArea:-moz-placeholder {
+    font-style: normal;
+}
+.composeBox-textArea:focus {
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+.composeBox-buttonContainer {
+    position: absolute !important;
+    right: 6px;
+    top: 6px;
+}
+.composeBox-helpText {
+    font-size: 10px;
+}
+#messaging-new-send.composeBox-sendButton, #messaging-send.composeBox-sendButton {
+    background: none repeat scroll 0 0 #3987cb;
+    box-shadow: none;
+    color: #fff !important;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.composeBox-blocked {
+    box-sizing: border-box;
+    font-size: 14px;
+    min-height: 94px;
+    padding: 20px 20px 0;
+}
+.topBar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.95);
+    font-size: 18px;
+    height: 42px;
+    padding-left: 10px;
+    width: 100%;
+}
+button.composeBox-unblockButton {
+    background: none repeat scroll 0 0 #3987cb;
+    margin-top: 10px;
+}
+.member {
+    cursor: pointer;
+    overflow: hidden;
+    padding: 9px;
+}
+.member.selected {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+}
+.member-avatarImage {
+    border-radius: 999px;
+    height: 32px;
+    width: 32px;
+}
+.member-detailsWrapper {
+    padding-left: 12px;
+}
+.member-name {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 13px;
+    font-weight: 700;
+}
+.member-groups {
+    color: rgba(0, 0, 0, 0.41);
+    font-size: 12px;
+    margin: 0;
+    max-height: 32px;
+    overflow: hidden;
+}
+.muOverlay.messaging {
+    opacity: 0 !important;
+}
+.muOverlay.messaging.active {
+    opacity: 0.98 !important;
+}
